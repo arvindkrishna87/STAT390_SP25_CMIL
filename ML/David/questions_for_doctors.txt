@@ -1,0 +1,3 @@
+Key questions for doctors
+    1) Based on the images in slide 4 of "Managing Different Image Sizes.pptx" (in ML/David), which images do you think are too small to provide any useful information?
+    2) We are planning to filter out some of the very small patches. How much of the image is it appropriate to leave unclassified (without a label)?
