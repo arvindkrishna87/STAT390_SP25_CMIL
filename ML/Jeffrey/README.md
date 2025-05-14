@@ -27,3 +27,20 @@ I implemented an attention-based CNN (SE-ResNet) and trained it on the full set 
 Now that I've validated ensembling the 3 different patches together does increase the performance, I will try to implement different ensembling methods that can increase the performacne of the model. I'll also try to implement these techniques on the new patches.
 
 Now that I've validated the attention based CNNs may be able to increase the performance of the model, I will try to implement different attention based CNNs and see if they can increase the performance of the model. I'll also try to implement these techniques on the new patches. Furthermore, I will try to implment a simple attention based CNN to develop weight maps for inference on what sections of the image are important for the model. 
+
+# Week 3
+
+## What I did this week
+
+1. Repeated the previous experiments (Splitting up the patches into 3 different stains, and then simple CNN for inference VS attention based CNN) on the new patches
+
+
+## This week's progress summary
+
+### 1. Repeated the previous experiments on the new patches
+
+I repeated the two main experiments on the new patches. I trained 3 of the same Resnet50 models on the 3 different sets of patches (H&E, Melan, and SOX10). I used the same resnet model for all 3 sets of patches. I only trained the final classifier on the full set of patches. The results were not  as expected. The H&E model was the worst performing model, but the other two models were fairly good. In the second experiment, I trained an attention based CNN (CoAtNet) and the Simple CNN on the 3 set patches. The results were better for the Melan and SOX10 patches, but the H&E model was not very good. 
+
+### 2. Next Steps
+
+After confirming that the new slides improve the performance of the models of Melan and SOX10, I will try to implement different  methods that can increase the performance of the model for H&E. I found a specific ResNet50 based model that is specifically designed for H&E patches. I will try to implement this model and see if it can increase the performance of the model. I'll also try ensembling the 3 different patches together and see if it can increase the performance of the model.
