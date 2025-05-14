@@ -1,3 +1,14 @@
+# Week 3 - Hannah
+
+## What I did this week
+
+1. trained and tested last week's densenet and MIL models on new patches
+2. visualized attention weights on the 5 highest weighted patches and 5 lowest weighted patches of each case
+
+### Conclusions
+
+My densenet model and MIL models did not outperform last week's models (which were trained on the curated list of cases that Krish gave us). Furthermore, Just from seeing the patches that MIL is assigning more weight to, I think the issue was that I’m feeding the MIL model all patches from each case without any filtering in the new patches folder. Due to the limited time we had for this week's presentation, I was only able to download the new patches folder and run 2 models. So moving forward, I’m going to go back and filter the patches from the raw patches folder based on David’s size analysis, and also I plan to branch out from the densenet classifier for my patch level training, and use faster, more high accuracy ones like resnet or even just David’s CNN, just because densenet is slow at running and it isn’t giving a very significant boost in accuracy.
+
 # Week 2 - Hannah
 
 ## What I did this week
