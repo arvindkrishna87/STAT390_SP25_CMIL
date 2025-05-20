@@ -1,3 +1,18 @@
+# Week 4 - Hannah
+
+## What I did this week
+
+1. trained and tested densenet MIL model with a filtered folder of the updated patches, incorporating David's image size recommendations
+2. research, trained, and tested a first version of FocusMIL as an attempt to address the incorrect focus MIL had on less informative patches
+
+### Conclusions
+
+To address the issue where the attention weights are focusing on blurred, zoomed-in, uninformative patches, I filtered out patches that are smaller than 60 pixels, per David's analysis and recommendation. After that, we could see that the case level prediction improved, but only due to the fact that it's now predicting high grade for every case. So, filtering helped MIL detect high-grade more confidently. Also, after visualizing the highest and lowest attention weight patches for the two models, it's clear that, while the model is still focusing on more zoomed in and less informative/dense patches, it's still assigning higher weights to patches a lot more clear and informative than last week's model.
+
+This week, I also implemented FocusMIL, which is a model architecture that addresses the limitation of MIL which is the overfitting on wrong correlations/patterns, rather than truly informative features at the patch level. FocusMIL does this by using Max-pooling aggregation and also variational encoding (which is usig a distribution rather than fixed embeddings for patch level features). In my implementation, at the case level, the model achieved 67% accuracy but does not correctly classify any benign cases. This suggests that FocusMIL can identify high-gradeCMIL, however, it doesn't classify benign cases at the case level. I also visualized the patches that FocusMIL scored the highest for, and this showed that, in contrast to the earlier MIL models that focused on visually more uninformative and blurred regions, FocusMIL consistely focused on patches with more clear cell structures and dense patterns.
+
+The next steps I hope to take is to improve my patch classifier model (which is densenet right now, but I hope to try Resnet or another model). This is because densenet is a very connected and dense architecture while Resnet is more efficient. ResNet is also more compatabile with MIL because it is less likely to overfit by memorizing features across layers.
+
 # Week 3 - Hannah
 
 ## What I did this week
