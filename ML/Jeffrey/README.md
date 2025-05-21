@@ -44,3 +44,28 @@ I repeated the two main experiments on the new patches. I trained 3 of the same 
 ### 2. Next Steps
 
 After confirming that the new slides improve the performance of the models of Melan and SOX10, I will try to implement different  methods that can increase the performance of the model for H&E. I found a specific ResNet50 based model that is specifically designed for H&E patches. I will try to implement this model and see if it can increase the performance of the model. I'll also try ensembling the 3 different patches together and see if it can increase the performance of the model.
+
+
+# Week 4
+
+## What I did this week
+
+1. Performed EDA on the new H&E patches to see why the model was not performing well after training on the new patches. Attempted to train a the same model on the new middle 60% of the H&E patches so see if I could increase the performance of the model by changing the training set.
+2. Attempted to train a new model on the new patches using a different architecture (DeiT) and see if it could increase the performance of the model. This was due to the fact that more complex models were perfroming better on the new patches, so I thought a more complex model would be better.
+
+## This week's progress summary
+
+### 1. EDA on the new H&E patches
+
+I visualized the distribution of image size for the new patches compared to the old patches. The new patches have much larger proportion patches that are on the smaller side and the larger side of the distribution. I also visualized the distribution of the number of patches and cases in the train, test, and validation sets. There were some class imbalances in the training and validation sets, so we had Harvey look into resampling methods to see if we could increase the performance of the model. 
+### 2. Model perfromance on new subset of H&E patches
+
+I trained the same model on the new middle 60% of the H&E patches. The model was able to predict patches with a higher accuracy across all models. However, the model was not able to predict the patches with a good accuracy. During this comparison, I also noticed that more complex models were performing better on the new patches, so I thought a more complex model would be better.
+
+### 3. Attempted to train a new model on the new patches using a different architecture (DeiT)
+
+I trained a new model on the new patches using a different architecture (DeiT). The model was able to predict patches with a good accuracy. Additionally, I trained a CoAtNet model with the new patches, unfreezing all layers. The model looks promising, but I need to train it for a longer time as Colab disconnects after 12 hours.
+
+### 4. Next Steps
+
+I will continue to train the CoAtNet model on the new patches and see if it can increase the performance of the model. I will also try to implement different methods that can increase the performance of the model for H&E. I will also try to ensemble the 3 different patches together and see if it can increase the performance of the model.
