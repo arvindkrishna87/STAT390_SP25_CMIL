@@ -1,3 +1,10 @@
+# Week 5 - Hannah
+
+## What I did this week
+
+1. Presentation on Multiple Instance Learning
+2. research next steps for final project (slice level MIL)
+
 # Week 4 - Hannah
 
 ## What I did this week
