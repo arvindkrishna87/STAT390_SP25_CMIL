@@ -69,3 +69,9 @@ I trained a new model on the new patches using a different architecture (DeiT). 
 ### 4. Next Steps
 
 I will continue to train the CoAtNet model on the new patches and see if it can increase the performance of the model. I will also try to implement different methods that can increase the performance of the model for H&E. I will also try to ensemble the 3 different patches together and see if it can increase the performance of the model.
+
+# Week 5
+
+## What I did this week
+
+1. Outlines plans for the final project and presentation. Developed a series of experiments to run for the final project to determine the best patch level classifier for each of the 3 different stains. Outlined ensemble methods to use for the final project, and potential utilizations of Akhils SVM model for case level classification.
