@@ -1,3 +1,19 @@
+# Final Presentation - Hannah
+
+## What I did this week
+
+1. Ran Slice level MIL on H&E, melan, and sox10 stains
+2. Ran an MIL with Gated Attention Mechanism
+3. Researched and created Presentation on MIL
+
+### Conclusions
+
+After changing the dataset object to group by an additional slice level instead of just by the case level, we saw significant improvements with the MIL model on H&E slices. We got an overal case level accuracy of 75 percent, and a benign recall of 71 percent. This was significantly better than my MIL models from before.
+
+After noticing this improvement, I also tried to run MIL on melan and sox10 stains, but got really terrible results. At first I wasn't sure why this was happening, but then realized that I had injected my MIL with the densenet patch classifier that was trained on only h&e stains. Which is why when learning on melan and sox10 stains, the model isn't extracting the right patch level features from those stains. Because these models each took overnight to run and were very computationally expensive, I wasn't able to run another densenet or patch classifier and MIL model before the deadline, but I think that seeing the results from the MIL trained by stains on H&E, it could be a promising area to pursue and test in the future.
+
+I also ran an MIL with Gated Attention on the H&E stains, but got worse results. The biggest difference between the gated attention and the current attention pooling I'm using is that gated introduces another sigmoid activation layer, allowing for more complex and learnable parameters.
+
 # Week 5 - Hannah
 
 ## What I did this week
